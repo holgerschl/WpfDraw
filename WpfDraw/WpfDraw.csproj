@@ -55,18 +55,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="Model\Adorner.cs" />
+    <Compile Include="Model\DrawModel.cs" />
+    <Compile Include="Model\ElementNotFoundException.cs" />
+    <Compile Include="Model\Ellipse.cs" />
+    <Compile Include="Model\Line.cs" />
+    <Compile Include="Model\Modus.cs" />
+    <Compile Include="Model\ModusChangedEventArgs.cs" />
+    <Compile Include="Model\Rectangle.cs" />
+    <Compile Include="Model\Shape.cs" />
+    <Compile Include="Model\ShapeChangedEventArgs.cs" />
+    <Compile Include="Model\ShapeType.cs" />
+    <Compile Include="ViewModel\DrawViewModel.cs" />
+    <Compile Include="View\Adorner.xaml.cs">
+      <DependentUpon>Adorner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BooleanVisibilityConverter.cs" />
+    <Compile Include="View\DrawHelper.cs" />
+    <Compile Include="View\DrawView.xaml.cs">
+      <DependentUpon>DrawView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="View\Adorner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DrawView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -95,6 +115,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -2,7 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfDraw"
-             StartupUri="MainWindow.xaml">
+             xmlns:view="clr-namespace:WpfDraw.View"
+             StartupUri="View\DrawView.xaml">
     <Application.Resources>
          
     </Application.Resources>
